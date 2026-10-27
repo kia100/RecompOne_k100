@@ -19,6 +19,7 @@ public sealed class Gl45Vram : IGlVram
 
     public void Init()
     {
+        _gl.Disable(EnableCap.Dither);
         _tex = CreateTex(GlVram.Width, GlVram.Height);
         _fbo = CreateFbo(_tex);
         _stageTex = CreateTex(VramShadow.Width, VramShadow.Height);
